@@ -1,1 +1,61 @@
+/* src/styles/main.scss */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap");
 @import "./base";
+
+:root {
+  --bg-dark: #070526;
+  --card-bg: #ffffff;
+  --muted: #6b7280;
+  --accent: #ff3b63; // botón
+  --accent-2: #2de2d6; // halftone grad
+  --radius-lg: 18px;
+  --container-max: 1160px;
+}
+
+/* global reset */
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  background: var(--bg-dark);
+  color: #0b1020;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* container */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* small helpers */
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.col {
+  flex: 1 1 0;
+}
+
+/* responsive utilities */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.75rem;
+  }
+}
