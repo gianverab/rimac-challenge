@@ -1,0 +1,27 @@
+.c-button {
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  &--primary {
+    background: var(--accent);
+    color: white;
+  }
+  &--ghost {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  &--sm {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.75rem;
+  }
+  &--md {
+    font-size: 1rem;
+  }
+  &--lg {
+    font-size: 1.125rem;
+    padding: 0.95rem 1.1rem;
+  }
+}
