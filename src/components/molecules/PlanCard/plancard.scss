@@ -1,0 +1,35 @@
+.m-plancard {
+  background: #fff;
+  padding: 1.15rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.25);
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  &__title {
+    font-weight: 700;
+    color: #0b1020;
+  }
+  &__price {
+    font-weight: 700;
+    color: #0b1020;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #374151;
+    font-size: 0.95rem;
+  }
+  &__item {
+    margin-bottom: 0.4rem;
+  }
+  &__cta {
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: center;
+  }
+}
