@@ -1,3 +1,4 @@
+// src/context/UserContext.tsx
 import React, {
   createContext,
   useContext,
@@ -9,18 +10,41 @@ import { User } from "../services/types";
 import { API } from "../services/api";
 import { useApi } from "../hooks/useApi";
 
+type FormData = {
+  documentType: string;
+  documentNumber: string;
+  phone: string;
+  acceptedPolicies: boolean;
+  acceptedComms: boolean;
+};
+
 type State = {
   user: User | null;
   loading: boolean;
   error?: string | null;
   age?: number | null;
+  form: FormData;
 };
 
 type Action =
   | { type: "SET_USER"; payload: User }
-  | { type: "SET_ERROR"; payload: string };
+  | { type: "SET_ERROR"; payload: string }
+  | { type: "UPDATE_FORM"; payload: Partial<FormData> }
+  | { type: "RESET_FORM" };
 
-const initial: State = { user: null, loading: true, error: null, age: null };
+const initial: State = {
+  user: null,
+  loading: true,
+  error: null,
+  age: null,
+  form: {
+    documentType: "DNI",
+    documentNumber: "",
+    phone: "",
+    acceptedPolicies: false,
+    acceptedComms: false,
+  },
+};
 
 function reducer(state: State, action: Action): State {
   switch (action.type) {
@@ -30,6 +54,10 @@ function reducer(state: State, action: Action): State {
     }
     case "SET_ERROR":
       return { ...state, error: action.payload, loading: false };
+    case "UPDATE_FORM":
+      return { ...state, form: { ...state.form, ...action.payload } };
+    case "RESET_FORM":
+      return { ...state, form: initial.form };
     default:
       return state;
   }
@@ -49,12 +77,15 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     if (data) dispatch({ type: "SET_USER", payload: data });
     if (error) dispatch({ type: "SET_ERROR", payload: error });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, error]);
 
   // compute age from birthDay once user exists
   const age = useMemo(() => {
-    if (!state.user?.birthDay) return null;
-    const [dd, mm, yyyy] = state.user.birthDay.split("-").map(Number);
+    const birthStr = state.user?.birthDay;
+    if (!birthStr) return null;
+    // birthDay format "dd-mm-yyyy"
+    const [dd, mm, yyyy] = birthStr.split("-").map(Number);
     const birth = new Date(yyyy, mm - 1, dd);
     const today = new Date();
     let a = today.getFullYear() - birth.getFullYear();
@@ -63,15 +94,12 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
     return a;
   }, [state.user?.birthDay]);
 
-  const value = { state: { ...state, loading }, dispatch };
+  // create a state object that includes computed age
+  const stateWithAge: State = { ...state, age, loading: state.loading };
 
-  return (
-    <UserContext.Provider value={value}>
-      {/* attach computed age to context via state (not via dispatch) */}
-      {/* consumer can recompute or we can expose getAge via hook */}
-      {children}
-    </UserContext.Provider>
-  );
+  const value = { state: stateWithAge, dispatch };
+
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };
 
 export function useUserContext() {
