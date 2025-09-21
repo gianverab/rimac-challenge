@@ -1,3 +1,4 @@
+// src/context/PlansContext.tsx  (sólo si quieres reemplazar por la versión completa)
 import React, { createContext, useContext, useEffect, useReducer } from "react";
 import { PlansResponse, Plan } from "../services/types";
 import { API } from "../services/api";
