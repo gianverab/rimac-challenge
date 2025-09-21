@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import OptionCard from "../../components/molecules/OptionCard/OptionCard";
 import { useUserContext } from "../../context/UserContext";
 import { usePlansContext } from "../../context/PlansContext";
-import { Plan } from "../../services/types";
+import type { Plan } from "../../services/types";
 import { PlanCard } from "../../components/molecules/PlanCard/PlanCard";
 import "./Plans.scss";
 

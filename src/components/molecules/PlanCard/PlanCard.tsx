@@ -1,6 +1,6 @@
 import React from "react";
 import "./PlanCard.scss";
-import { Plan } from "../../../services/types";
+import type { Plan } from "../../../services/types";
 import { Button } from "../../atoms/Button/Button";
 
 type Props = {

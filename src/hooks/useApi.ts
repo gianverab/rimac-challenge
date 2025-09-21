@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios, { CancelTokenSource } from "axios";
+import axios from "axios";
 
 export function useApi<T = any>(url?: string | null) {
   const [data, setData] = useState<T | null>(null);
@@ -8,18 +8,22 @@ export function useApi<T = any>(url?: string | null) {
 
   useEffect(() => {
     if (!url) return;
-    let source: CancelTokenSource = axios.CancelToken.source();
+
+    const controller = new AbortController();
+
     setLoading(true);
     setError(null);
+
     axios
-      .get<T>(url, { cancelToken: source.token })
+      .get<T>(url, { signal: controller.signal })
       .then((res) => setData(res.data))
       .catch((err) => {
-        if (axios.isCancel(err)) return;
+        if (axios.isCancel(err) || err.name === "CanceledError") return;
         setError(err?.message ?? "Unknown error");
       })
       .finally(() => setLoading(false));
-    return () => source.cancel("Request cancelled");
+
+    return () => controller.abort();
   }, [url]);
 
   return { data, loading, error };

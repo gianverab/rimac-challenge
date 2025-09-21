@@ -1,4 +1,3 @@
-// src/context/UserContext.tsx
 import React, {
   createContext,
   useContext,
@@ -6,7 +5,7 @@ import React, {
   useMemo,
   useReducer,
 } from "react";
-import { User } from "../services/types";
+import type { User } from "../services/types";
 import { API } from "../services/api";
 import { useApi } from "../hooks/useApi";
 
