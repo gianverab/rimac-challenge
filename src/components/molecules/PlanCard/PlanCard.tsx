@@ -1,5 +1,5 @@
 import React from "react";
-import "./plancard.scss";
+import "./PlanCard.scss";
 import { Plan } from "../../../services/types";
 import { Button } from "../../atoms/Button/Button";
 

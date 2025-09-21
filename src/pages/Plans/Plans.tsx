@@ -53,7 +53,7 @@ const Plans: React.FC = () => {
         payload: otherAgeLocal === "" ? null : Number(otherAgeLocal),
       });
     }
-    navigate("/resumen");
+    navigate("/summary");
   };
 
   return (

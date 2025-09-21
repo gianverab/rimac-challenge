@@ -1,0 +1,35 @@
+.summary__header {
+  margin-bottom: 1rem;
+}
+.summary__logo {
+  height: 36px;
+}
+.summary__title {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.summary__card {
+  background: #fff;
+  padding: 1.1rem;
+  border-radius: 12px;
+  max-width: 760px;
+  color: #111;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.08);
+}
+.summary__name {
+  font-weight: 700;
+  margin: 8px 0 6px;
+}
+.summary__block {
+  color: #374151;
+  line-height: 1.45;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .summary__card {
+    padding: 0.9rem;
+  }
+}
