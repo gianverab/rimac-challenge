@@ -1,4 +1,3 @@
-// src/components/OptionCard/OptionCard.tsx
 import React from "react";
 import "./OptionCard.scss";
 

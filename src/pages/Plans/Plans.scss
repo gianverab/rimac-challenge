@@ -1,0 +1,56 @@
+.plans__header {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.plans__logo {
+  height: 38px;
+}
+
+.plans__main {
+  margin-top: 6px;
+}
+.plans__title {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+.plans__subtitle {
+  color: #c6c9dd;
+  margin-bottom: 1rem;
+}
+
+.plans__options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.plans__other {
+  margin: 0.8rem 0;
+}
+.plans__other-input {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  width: 140px;
+}
+
+.plans__list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+.plans__list-item {
+  width: 100%;
+}
+
+@media (min-width: 720px) {
+  .plans__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .plans__options {
+    flex-wrap: nowrap;
+  }
+}

@@ -1,8 +1,7 @@
-// src/pages/Home/Home.tsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../../context/UserContext";
-import Button from "../../components/atoms/Button/Button"; // si tu Button está en otra ruta, ajusta
+import Button from "../../components/atoms/Button/Button";
 import "../../styles/main.scss";
 import "./Home.scss";
 
@@ -17,7 +16,6 @@ const Home: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Validación simple
     if (!form.documentNumber.trim() || !form.phone.trim()) {
       alert("Por favor ingresa Nro. de documento y celular.");
       return;
