@@ -3,10 +3,12 @@
 
 :root {
   --bg-dark: #070526;
+  --bg-white: #f9f9fb;
   --card-bg: #ffffff;
   --muted: #6b7280;
-  --accent: #ff3b63; // botón
-  --accent-2: #2de2d6; // halftone grad
+  --accent: #ff3b63;
+  --accent-2: #2de2d6;
+  --text-dark: #03050f;
   --radius-lg: 18px;
   --container-max: 1160px;
 }
@@ -30,8 +32,8 @@ body {
     Roboto,
     "Helvetica Neue",
     Arial;
-  background: var(--bg-dark);
-  color: #0b1020;
+  background: var(--bg-white);
+  color: var(--text-dark);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -39,7 +41,7 @@ body {
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem 0;
 }
 
 /* small helpers */

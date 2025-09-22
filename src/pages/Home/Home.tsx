@@ -29,18 +29,21 @@ const Home: React.FC = () => {
 
   return (
     <div className="home container">
-      <header className="home__header row">
-        <img
-          src="/src/assets/logo-rimac.png"
-          alt="RIMAC"
-          className="home__logo"
-        />
-        <div className="home__contact">(01) 411 6001</div>
-      </header>
-
       <main className="home__main row">
-        <section className="home__left col">
-          <h1 className="home__title">Creado para ti y tu familia</h1>
+        <aside className="home__left col">
+          <div className="home__hero">
+            <img
+              src="/src/assets/hero.png"
+              alt="Familia"
+              className="home__hero-img"
+            />
+          </div>
+        </aside>
+        <section className="home__right col">
+          <h1 className="home__title">
+            <span>Seguro Salud Flexible</span>
+          </h1>
+          <h2 className="home__tagline">Creado para ti y tu familia</h2>
           <p className="home__subtitle">
             Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra
             asesoría. 100% online.
@@ -106,21 +109,13 @@ const Home: React.FC = () => {
               <span>Acepto recibir comunicaciones comerciales</span>
             </label>
 
+            <div className="terms">Aplican T&eacute;rminos y Condiciones</div>
+
             <div className="home__cta">
               <Button type="submit">Cotiza aquí</Button>
             </div>
           </form>
         </section>
-
-        <aside className="home__right col">
-          <div className="home__hero">
-            <img
-              src="/src/assets/hero-family.jpg"
-              alt="Familia"
-              className="home__hero-img"
-            />
-          </div>
-        </aside>
       </main>
     </div>
   );

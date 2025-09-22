@@ -3,7 +3,7 @@ import clsx from "clsx";
 import "./Button.scss";
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: "primary" | "ghost";
+  variant?: "primary" | "ghost" | "secondary";
   size?: "sm" | "md" | "lg";
 };
 
