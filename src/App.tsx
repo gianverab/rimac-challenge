@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.scss";
+import Telephone from "./components/svg/telephone";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const Plans = lazy(() => import("./pages/Plans/Plans"));
@@ -19,7 +20,10 @@ export default function App() {
           />{" "}
         </Link>
         <div className="app__contact">
-          ¡Compra por este medio! (01) 411 6001
+          ¡Compra por este medio!
+          <button className="app__contact-button">
+            <Telephone className="app__contact-icon" /> (01) 411 6001
+          </button>
         </div>
       </header>
       <main>
@@ -31,6 +35,14 @@ export default function App() {
           </Routes>
         </Suspense>
       </main>
+      <footer className="app__footer">
+        <img
+          src="src/assets/logo-white.png"
+          alt="Logo"
+          className="app__footer-logo"
+        />
+        <p>© 2025 RIMAC Seguros y Reaseguros.</p>
+      </footer>
     </div>
   );
 }

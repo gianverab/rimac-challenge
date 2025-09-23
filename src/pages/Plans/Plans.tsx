@@ -58,14 +58,6 @@ const Plans: React.FC = () => {
 
   return (
     <div className="plans container">
-      <header className="plans__header">
-        <img
-          src="/src/assets/logo-rimac.png"
-          alt="RIMAC"
-          className="plans__logo"
-        />
-      </header>
-
       <main className="plans__main">
         <h2 className="plans__title">Rocío ¿Para quién deseas cotizar?</h2>
         <p className="plans__subtitle">

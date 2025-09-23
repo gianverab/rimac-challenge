@@ -10,7 +10,7 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 export const Button: React.FC<Props> = ({
   children,
   variant = "primary",
-  size = "md",
+  size = "lg",
   className,
   ...rest
 }) => {

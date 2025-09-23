@@ -9,6 +9,7 @@
   --accent: #ff3b63;
   --accent-2: #2de2d6;
   --text-dark: #03050f;
+  --accent-red: #ff1c44;
   --radius-lg: 18px;
   --container-max: 1160px;
 }
@@ -39,7 +40,6 @@ body {
 
 /* container */
 .container {
-  max-width: var(--container-max);
   margin: 0 auto;
   padding: 2rem 0;
 }
