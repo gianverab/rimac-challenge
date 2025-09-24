@@ -68,27 +68,8 @@
     display: flex;
     justify-content: flex-end;
   }
-
-  .dot {
-    background: #10b981;
-    color: #fff;
-    padding: 3px 7px;
-    border-radius: 999px;
-    font-weight: 700;
-  }
-  .dot--empty {
-    color: #cbd5e1;
-    font-weight: 700;
-  }
 }
 
 /* responsive */
 @media (max-width: 768px) {
-  .o-option-card {
-    padding: 10px;
-  }
-  .o-option-card__icon {
-    width: 40px;
-    height: 40px;
-  }
 }
