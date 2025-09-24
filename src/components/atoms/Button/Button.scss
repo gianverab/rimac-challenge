@@ -23,10 +23,13 @@
   &--secondary {
     background: var(--accent-red);
     color: #fff;
-    border-radius: 12px;
-    padding: 0.65rem 1rem;
-    font-size: 0.95rem;
+    border-radius: 2rem;
+    padding: 0.875rem 1rem;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.4px;
     box-shadow: none;
+    width: 100%;
   }
 
   &--ghost {
@@ -41,8 +44,8 @@
   }
 
   &--md {
-    font-size: 1rem;
-    padding: 0.7rem 1.1rem;
+    padding: 0.875rem 1rem;
+    font-size: 1.125rem;
   }
 
   &--lg {

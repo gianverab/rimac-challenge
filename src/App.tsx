@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.scss";
-import Telephone from "./components/svg/telephone";
+import TelephoneIcon from "./components/svg/telephone";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const Plans = lazy(() => import("./pages/Plans/Plans"));
@@ -22,7 +22,7 @@ export default function App() {
         <div className="app__contact">
           ¡Compra por este medio!
           <button className="app__contact-button">
-            <Telephone className="app__contact-icon" /> (01) 411 6001
+            <TelephoneIcon className="app__contact-icon" /> (01) 411 6001
           </button>
         </div>
       </header>

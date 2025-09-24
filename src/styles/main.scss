@@ -1,14 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import "./base";
 
 :root {
   --bg-dark: #070526;
   --bg-white: #f9f9fb;
+  --bg-gray: #edeffc;
+  --bg-blue: #4f4fff;
+  --bg-light-gray: #d7dbf5;
   --card-bg: #ffffff;
+  --card-border: #03050f;
   --muted: #6b7280;
   --accent: #ff3b63;
   --accent-2: #2de2d6;
-  --text-dark: #03050f;
+  --text-dark: #141938;
+  --text-gray: #7981b2;
   --accent-red: #ff1c44;
   --radius-lg: 18px;
   --container-max: 1160px;
@@ -26,7 +31,7 @@ body,
 body {
   margin: 0;
   font-family:
-    "Inter",
+    "Lato",
     system-ui,
     -apple-system,
     "Segoe UI",
@@ -41,7 +46,7 @@ body {
 /* container */
 .container {
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 0;
 }
 
 /* small helpers */

@@ -1,47 +1,84 @@
-.plans__main {
-  margin-top: 6px;
-}
-.plans__title {
-  color: #fff;
-  font-size: 1.4rem;
-  margin-bottom: 4px;
-}
-.plans__subtitle {
-  color: #c6c9dd;
-  margin-bottom: 1rem;
-}
-
-.plans__options {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-.plans__other {
-  margin: 0.8rem 0;
-}
-.plans__other-input {
-  padding: 0.6rem;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-  width: 140px;
-}
-
-.plans__list {
-  margin-top: 1rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
-}
-.plans__list-item {
-  width: 100%;
-}
-
-@media (min-width: 720px) {
-  .plans__list {
-    grid-template-columns: repeat(3, 1fr);
+.plans {
+  &__back {
+    background: none;
+    border: none;
+    color: var(--bg-blue);
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
-  .plans__options {
-    flex-wrap: nowrap;
+
+  &__main {
+    padding: 0 13.5rem 7rem 13.5rem;
+  }
+
+  &__title {
+    color: var(--text-dark);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: var(--text-dark);
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
+
+  &__container {
+    margin-top: 3.5rem;
+    padding: 0 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-options {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__other {
+    margin: 1rem 0;
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+    }
+  }
+
+  &__other-input {
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    width: 160px;
+  }
+
+  &__list {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  &__list-item {
+    width: 100%;
+  }
+
+  @media (min-width: 720px) {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__options {
+      flex-wrap: nowrap;
+    }
   }
 }

@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
 
-const Telephone = (props: SVGProps<SVGSVGElement>) => (
+const TelephoneIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
@@ -16,4 +16,4 @@ const Telephone = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
-export default Telephone;
+export default TelephoneIcon;
