@@ -75,7 +75,22 @@
 
 /* mobile */
 @media (max-width: 768px) {
-  .summary__card {
-    padding: 0.9rem;
+  .summary {
+    &__header {
+      .stepper {
+        margin-bottom: 0;
+      }
+    }
+    &__main {
+      padding: 1rem 2rem 3.5rem 2rem;
+      gap: 1.5rem;
+      flex-grow: 1;
+    }
+    &__title {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+      text-align: left;
+      margin: 0;
+    }
   }
 }
