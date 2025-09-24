@@ -19,7 +19,9 @@ const Stepper: React.FC<StepperProps> = ({ steps, activeStep }) => {
         >
           <div className="stepper__circle">{i + 1}</div>
           <span className="stepper__label">{step}</span>
-          {i < steps.length - 1 && <LineIcon />}
+          <div className="stepper__dots">
+            {i < steps.length - 1 && <LineIcon />}
+          </div>
         </div>
       ))}
     </div>

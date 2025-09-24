@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../../context/UserContext";
 import { usePlansContext } from "../../context/PlansContext";
 import "./Summary.scss";
+import Stepper from "../../components/molecules/Stepper/Stepper";
+import BackIcon from "../../components/svg/back";
+import UserGroupIcon from "../../components/svg/user-group";
 
 const Resumen: React.FC = () => {
   const navigate = useNavigate();
@@ -32,34 +35,40 @@ const Resumen: React.FC = () => {
   return (
     <div className="summary container">
       <header className="summary__header">
-        <img
-          src="/src/assets/logo-rimac.png"
-          alt="RIMAC"
-          className="summary__logo"
-        />
+        <Stepper steps={["Planes y coberturas", "Resumen"]} activeStep={1} />
       </header>
 
       <main className="summary__main">
+        <button className="plans__back" onClick={() => navigate(-1)}>
+          <BackIcon /> Volver
+        </button>
         <h2 className="summary__title">Resumen del seguro</h2>
 
         <section className="summary__card">
-          <h4>Precios calculados para:</h4>
-          <p className="summary__name">{personName}</p>
+          <header className="summary__card-header">
+            <h4 className="summary__card-title">Precios calculados para:</h4>
+            <p className="summary__card-name">
+              <UserGroupIcon />
+              {personName}
+            </p>
+          </header>
 
-          <div className="summary__block">
-            <div>
+          <div className="summary__card-block">
+            <p className="summary__card-text--bold">
               <strong>Responsable de pago</strong>
-            </div>
-            <div>DNI: {responsibleDNI}</div>
-            <div>Celular: {phone}</div>
+            </p>
+            <p className="summary__card-text">DNI: {responsibleDNI}</p>
+            <p className="summary__card-text">Celular: {phone}</p>
           </div>
 
-          <div className="summary__block" style={{ marginTop: 12 }}>
-            <div>
+          <div className="summary__card-block" style={{ marginTop: 12 }}>
+            <p className="summary__card-text--bold">
               <strong>Plan elegido</strong>
-            </div>
-            <div>{plan.name}</div>
-            <div>Costo del Plan: ${finalPrice} al mes</div>
+            </p>
+            <p className="summary__card-text">{plan.name}</p>
+            <p className="summary__card-text">
+              Costo del Plan: ${finalPrice} al mes
+            </p>
             {isForOther && otherAge !== null && (
               <div>(Se aplicó 5% de descuento — edad: {otherAge})</div>
             )}
