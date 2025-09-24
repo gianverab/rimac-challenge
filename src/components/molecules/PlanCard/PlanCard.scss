@@ -91,3 +91,9 @@
     justify-content: center;
   }
 }
+/* mobile */
+@media (max-width: 768px) {
+  .m-plancard {
+    min-height: auto;
+  }
+}

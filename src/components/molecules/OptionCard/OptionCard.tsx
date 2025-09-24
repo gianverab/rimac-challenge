@@ -47,6 +47,18 @@ const OptionCard: React.FC<OptionCardProps> = ({
             <div className="o-option-card__desc">{description}</div>
           </div>
         </div>
+        <div className="o-option-card__mobile mobile">
+          <div className="o-option-card__title">
+            <div className="o-option-card__icon">
+              {icon ?? <span className="placeholder-icon">🏥</span>}
+            </div>
+            {title}
+          </div>
+
+          <div className="o-option-card__text">
+            <div className="o-option-card__desc">{description}</div>
+          </div>
+        </div>
       </div>
     </label>
   );
