@@ -23,7 +23,10 @@ export const PlanCard: React.FC<Props> = ({
     : plan.price;
   return (
     <article className="m-plancard" aria-label={plan.name}>
-      <div>
+      <div className="m-plancard__inner">
+        {plan.name === "Plan en Casa y Clínica" && (
+          <span className="m-plancard__inner-tag">Plan recomendado</span>
+        )}
         <div className="m-plancard__content">
           <div className="m-plancard__content-text">
             <h4 className="m-plancard__title">{plan.name}</h4>

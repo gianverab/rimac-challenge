@@ -47,3 +47,59 @@
     }
   }
 }
+
+/* mobile */
+@media (max-width: 768px) {
+  .app {
+    &__header {
+      padding: 0.75rem;
+    }
+    &__logo {
+      height: 32px;
+      width: auto;
+    }
+    &__contact {
+      span {
+        display: none;
+      }
+    }
+    &__footer {
+      display: none;
+
+      &-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0.75rem;
+        background-color: var(--text-dark);
+        color: #ffffff;
+        gap: 1.5rem;
+
+        p {
+          margin: 0;
+          font-size: 0.75rem;
+          line-height: 1.125rem;
+          letter-spacing: 0.1px;
+        }
+      }
+      &-text {
+        border-top: 1px solid #2b304e;
+        padding-top: 1.5rem;
+        display: flex;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+      }
+      &-logo {
+        height: 20px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+}

@@ -116,6 +116,93 @@ const Home: React.FC = () => {
             </div>
           </form>
         </section>
+        <section className="home__top mobile">
+          <div className="home__heading">
+            <h1 className="home__title">
+              <span>Seguro Salud Flexible</span>
+            </h1>
+            <h2 className="home__tagline">Creado para ti y tu familia</h2>
+          </div>
+          <div className="home__hero">
+            <img
+              src="/src/assets/hero.png"
+              alt="Familia"
+              className="home__hero-img"
+            />
+          </div>
+        </section>
+        <section className="home__bottom mobile">
+          <p className="home__subtitle">
+            Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra
+            asesoría. 100% online.
+          </p>
+          <form className="home__form" onSubmit={handleSubmit} noValidate>
+            <label className="field">
+              <span className="field__label">Tipo de documento</span>
+              <select
+                value={form.documentType}
+                onChange={(e) => updateField({ documentType: e.target.value })}
+                className="field__select"
+              >
+                <option value="DNI">DNI</option>
+                <option value="CE">CE</option>
+                <option value="PAS">Pasaporte</option>
+              </select>
+            </label>
+
+            <label className="field">
+              <span className="field__label">Nro. de documento</span>
+              <input
+                className="field__input"
+                value={form.documentNumber}
+                onChange={(e) =>
+                  updateField({ documentNumber: e.target.value })
+                }
+                placeholder="30216147"
+                required
+              />
+            </label>
+
+            <label className="field">
+              <span className="field__label">Celular</span>
+              <input
+                className="field__input"
+                value={form.phone}
+                onChange={(e) => updateField({ phone: e.target.value })}
+                placeholder="951234567"
+                required
+              />
+            </label>
+
+            <label className="checkbox-row">
+              <input
+                type="checkbox"
+                checked={form.acceptedPolicies}
+                onChange={(e) =>
+                  updateField({ acceptedPolicies: e.target.checked })
+                }
+              />
+              <span>Acepto la Política de Privacidad</span>
+            </label>
+
+            <label className="checkbox-row">
+              <input
+                type="checkbox"
+                checked={form.acceptedComms}
+                onChange={(e) =>
+                  updateField({ acceptedComms: e.target.checked })
+                }
+              />
+              <span>Acepto recibir comunicaciones comerciales</span>
+            </label>
+
+            <div className="terms">Aplican T&eacute;rminos y Condiciones</div>
+
+            <div className="home__cta">
+              <Button type="submit">Cotiza aquí</Button>
+            </div>
+          </form>
+        </section>
       </main>
     </div>
   );

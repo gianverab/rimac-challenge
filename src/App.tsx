@@ -20,7 +20,7 @@ export default function App() {
           />{" "}
         </Link>
         <div className="app__contact">
-          ¡Compra por este medio!
+          <span>¡Compra por este medio!</span>
           <button className="app__contact-button">
             <TelephoneIcon className="app__contact-icon" /> (01) 411 6001
           </button>
@@ -42,6 +42,16 @@ export default function App() {
           className="app__footer-logo"
         />
         <p>© 2025 RIMAC Seguros y Reaseguros.</p>
+      </footer>
+      <footer className="app__footer-mobile mobile">
+        <img
+          src="src/assets/logo-white-horizontal.png"
+          alt="Logo"
+          className="app__footer-logo"
+        />
+        <div className="app__footer-text">
+          <p>© 2025 RIMAC Seguros y Reaseguros.</p>
+        </div>
       </footer>
     </div>
   );

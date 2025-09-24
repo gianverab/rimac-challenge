@@ -6,6 +6,7 @@
   --bg-white: #f9f9fb;
   --bg-gray: #edeffc;
   --bg-blue: #4f4fff;
+  --bg-green: #7df0ba;
   --bg-light-gray: #d7dbf5;
   --card-bg: #ffffff;
   --card-border: #03050f;
@@ -53,7 +54,6 @@ body {
 .row {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 .col {
   flex: 1 1 0;
@@ -62,6 +62,6 @@ body {
 /* responsive utilities */
 @media (max-width: 768px) {
   .container {
-    padding: 0.75rem;
+    padding: 0 0.75rem;
   }
 }
