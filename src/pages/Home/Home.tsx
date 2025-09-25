@@ -124,11 +124,7 @@ const Home: React.FC = () => {
             <h2 className="home__tagline">Creado para ti y tu familia</h2>
           </div>
           <div className="home__hero">
-            <img
-              src="/src/assets/hero.png"
-              alt="Familia"
-              className="home__hero-img"
-            />
+            <img src="/hero.png" alt="Familia" className="home__hero-img" />
           </div>
         </section>
         <section className="home__bottom mobile">

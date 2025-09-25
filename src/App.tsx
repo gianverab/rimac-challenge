@@ -13,11 +13,7 @@ export default function App() {
       <header className="app__header row">
         <Link to="/">
           {" "}
-          <img
-            src="/src/assets/logo.png"
-            alt="RIMAC"
-            className="app__logo"
-          />{" "}
+          <img src="/logo.png" alt="RIMAC" className="app__logo" />{" "}
         </Link>
         <div className="app__contact">
           <span>¡Compra por este medio!</span>
@@ -36,16 +32,12 @@ export default function App() {
         </Suspense>
       </main>
       <footer className="app__footer">
-        <img
-          src="src/assets/logo-white.png"
-          alt="Logo"
-          className="app__footer-logo"
-        />
+        <img src="/logo-white.png" alt="Logo" className="app__footer-logo" />
         <p>© 2025 RIMAC Seguros y Reaseguros.</p>
       </footer>
       <footer className="app__footer-mobile mobile">
         <img
-          src="src/assets/logo-white-horizontal.png"
+          src="/logo-white-horizontal.png"
           alt="Logo"
           className="app__footer-logo"
         />
