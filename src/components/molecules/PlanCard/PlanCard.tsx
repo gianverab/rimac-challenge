@@ -45,11 +45,15 @@ export const PlanCard: React.FC<Props> = ({
           )}
         </div>
         <ul className="m-plancard__list">
-          {plan.description.map((d, i) => (
-            <li key={i} className="m-plancard__item">
-              • {d}
-            </li>
-          ))}
+          {Array.isArray(plan.description) ? (
+            plan.description.map((d, i) => (
+              <li key={i} className="m-plancard__item">
+                • {d}
+              </li>
+            ))
+          ) : (
+            <li className="m-plancard__item">• {plan.description}</li>
+          )}
         </ul>
       </div>
       <div className="m-plancard__cta">

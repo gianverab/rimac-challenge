@@ -62,7 +62,7 @@ function reducer(state: State, action: Action): State {
   }
 }
 
-const UserContext = createContext<{
+export const UserContext = createContext<{
   state: State;
   dispatch: React.Dispatch<Action>;
 } | null>(null);

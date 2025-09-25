@@ -45,7 +45,7 @@ function reducer(state: State, action: Action): State {
   }
 }
 
-const PlansContext = createContext<{
+export const PlansContext = createContext<{
   state: State;
   dispatch: React.Dispatch<Action>;
 } | null>(null);
