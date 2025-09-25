@@ -32,11 +32,7 @@ const Home: React.FC = () => {
       <main className="home__main row">
         <aside className="home__left col">
           <div className="home__hero">
-            <img
-              src="/src/assets/hero.png"
-              alt="Familia"
-              className="home__hero-img"
-            />
+            <img src="/hero.png" alt="Familia" className="home__hero-img" />
           </div>
         </aside>
         <section className="home__right col">
